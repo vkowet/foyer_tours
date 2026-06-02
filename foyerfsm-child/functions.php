@@ -207,7 +207,7 @@ add_action('wp_nav_menu_before', 'foyerfsm_add_menu_button');
 // =============================================
 // 9. POST TYPE CHAMBRES
 // =============================================
-add_action('init', 'foyerfsm_register_chambre_post_type');
+/* add_action('init', 'foyerfsm_register_chambre_post_type');
 function foyerfsm_register_chambre_post_type()
 {
     register_post_type('chambre', array(
@@ -221,7 +221,7 @@ function foyerfsm_register_chambre_post_type()
         'menu_icon' => 'dashicons-building',
         'show_in_rest' => true,
     ));
-}
+} */
 
 // =============================================
 // 10. DÉSACTIVER GUTENBERG SUR PAGE ACCUEIL
