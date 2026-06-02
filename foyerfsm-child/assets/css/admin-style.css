@@ -1,0 +1,348 @@
+/**
+ * Styles pour l'interface d'administration
+ * Simplifie et embellit l'interface pour les sœurs
+ */
+
+/* ===== EN-TÊTE DE LA PAGE D'OPTIONS ===== */
+.toplevel_page_foyerfsm-options .wrap {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.toplevel_page_foyerfsm-options .wrap h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #b75b7d;
+    display: inline-block;
+}
+
+/* ===== NOTICE D'INFORMATION ===== */
+.toplevel_page_foyerfsm-options .notice-info {
+    background: #f8f5f0;
+    border-left-color: #b75b7d;
+    padding: 15px 20px;
+    margin: 20px 0 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.toplevel_page_foyerfsm-options .notice-info p {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #2c3e50;
+}
+
+/* ===== ONGLETS DE NAVIGATION ===== */
+.toplevel_page_foyerfsm-options .nav-tab-wrapper {
+    border-bottom: 2px solid #e5e5e5;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    background: white;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.toplevel_page_foyerfsm-options .nav-tab {
+    border: none;
+    background: transparent;
+    color: #666;
+    padding: 15px 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 0 2px -2px;
+    border-bottom: 3px solid transparent;
+}
+
+.toplevel_page_foyerfsm-options .nav-tab:hover {
+    color: #b75b7d;
+    background: #f9f9f9;
+    border-bottom-color: #b75b7d40;
+}
+
+.toplevel_page_foyerfsm-options .nav-tab-active,
+.toplevel_page_foyerfsm-options .nav-tab-active:hover {
+    background: transparent;
+    color: #b75b7d;
+    border-bottom-color: #b75b7d;
+    font-weight: 600;
+}
+
+/* ===== FORMULAIRES ===== */
+.toplevel_page_foyerfsm-options form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* Sections */
+.toplevel_page_foyerfsm-options .form-table {
+    margin-top: 0;
+}
+
+.toplevel_page_foyerfsm-options .form-table th {
+    width: 220px;
+    padding: 20px 20px 20px 0;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.toplevel_page_foyerfsm-options .form-table td {
+    padding: 15px 10px;
+}
+
+/* Champs de texte */
+.toplevel_page_foyerfsm-options .regular-text,
+.toplevel_page_foyerfsm-options .large-text {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+.toplevel_page_foyerfsm-options .regular-text:focus,
+.toplevel_page_foyerfsm-options .large-text:focus {
+    border-color: #b75b7d;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(183,91,125,0.1);
+    outline: none;
+}
+
+/* Zone de texte */
+.toplevel_page_foyerfsm-options textarea {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 10px 12px;
+    background: #fafafa;
+    transition: all 0.3s ease;
+    font-family: 'Courier New', monospace;
+    line-height: 1.5;
+}
+
+.toplevel_page_foyerfsm-options textarea:focus {
+    border-color: #b75b7d;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(183,91,125,0.1);
+    outline: none;
+}
+
+/* Boutons d'upload */
+.toplevel_page_foyerfsm-options .media-field {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+}
+
+.toplevel_page_foyerfsm-options .button {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 15px;
+    color: #333;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.toplevel_page_foyerfsm-options .button:hover {
+    background: #e5e5e5;
+    border-color: #ccc;
+}
+
+.toplevel_page_foyerfsm-options .media-uploader {
+    background: #b75b7d;
+    border-color: #a04b6b;
+    color: white;
+    font-weight: 500;
+}
+
+.toplevel_page_foyerfsm-options .media-uploader:hover {
+    background: #a04b6b;
+    border-color: #8b3a5a;
+}
+
+.toplevel_page_foyerfsm-options .media-remove {
+    background: #f0f0f0;
+    border-color: #ddd;
+}
+
+.toplevel_page_foyerfsm-options .media-remove:hover {
+    background: #e5e5e5;
+}
+
+/* Prévisualisation des images */
+.toplevel_page_foyerfsm-options .media-preview {
+    margin-top: 15px;
+    max-width: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.toplevel_page_foyerfsm-options .media-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Checkbox */
+.toplevel_page_foyerfsm-options input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.toplevel_page_foyerfsm-options input[type="checkbox"]:checked {
+    background-color: #b75b7d;
+    border-color: #b75b7d;
+}
+
+/* Select */
+.toplevel_page_foyerfsm-options select {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 8px 30px 8px 12px;
+    background: #fafafa url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23666" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>') no-repeat right 10px center;
+    appearance: none;
+    -webkit-appearance: none;
+    min-width: 200px;
+}
+
+.toplevel_page_foyerfsm-options select:focus {
+    border-color: #b75b7d;
+    outline: none;
+    background-color: white;
+}
+
+/* Bouton de soumission */
+.toplevel_page_foyerfsm-options .submit {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+    text-align: right;
+}
+
+.toplevel_page_foyerfsm-options .button-primary {
+    background: linear-gradient(135deg, #b75b7d, #a04b6b);
+    border: none;
+    border-radius: 50px;
+    padding: 12px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(183,91,125,0.3);
+    border: 2px solid transparent;
+}
+
+.toplevel_page_foyerfsm-options .button-primary:hover {
+    background: linear-gradient(135deg, #a04b6b, #8b3a5a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(183,91,125,0.4);
+}
+
+.toplevel_page_foyerfsm-options .button-primary:active {
+    transform: translateY(0);
+}
+
+/* Chiffres (number) */
+.toplevel_page_foyerfsm-options .small-text {
+    width: 100px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 8px;
+    background: #fafafa;
+}
+
+/* Champs couleur */
+.toplevel_page_foyerfsm-options .color-field {
+    width: 60px;
+    height: 40px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 2px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.toplevel_page_foyerfsm-options .color-field + code {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Descriptions */
+.toplevel_page_foyerfsm-options .description {
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+/* ===== RACCOURCI DANS LA BARRE D'ADMIN ===== */
+#wpadminbar .foyer-options-link .ab-item {
+    background: #b75b7d !important;
+    color: white !important;
+    border-radius: 30px !important;
+    margin: 5px 10px !important;
+    padding: 0 15px !important;
+    font-weight: 600 !important;
+}
+
+#wpadminbar .foyer-options-link .ab-item:hover {
+    background: #a04b6b !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 782px) {
+    .toplevel_page_foyerfsm-options .nav-tab-wrapper {
+        padding: 0;
+        white-space: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .toplevel_page_foyerfsm-options .nav-tab {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+        display: inline-block;
+        float: none;
+    }
+    
+    .toplevel_page_foyerfsm-options .form-table th,
+    .toplevel_page_foyerfsm-options .form-table td {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .toplevel_page_foyerfsm-options .form-table th {
+        padding-top: 20px;
+    }
+    
+    .toplevel_page_foyerfsm-options form {
+        padding: 20px;
+    }
+    
+    .toplevel_page_foyerfsm-options .regular-text,
+    .toplevel_page_foyerfsm-options .large-text,
+    .toplevel_page_foyerfsm-options select {
+        width: 100%;
+    }
+    
+    .toplevel_page_foyerfsm-options .button-primary {
+        width: 100%;
+    }
+}

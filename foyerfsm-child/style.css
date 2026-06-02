@@ -1,0 +1,594 @@
+/*
+Theme Name: Foyer FSM - Enfant
+Theme URI: https://lefoyer.valkoprod.com
+Description: Thème enfant pour Foyer FSM
+Author: Valkprod
+Author URI: valkoprod.com
+Template: FoyerFSM
+Version: 1.0.0
+License: GPL v2 or later
+Text Domain: foyerfsm
+*/
+
+/* Imports - Ne pas effacer */
+/*@import url("../foyerfsm-parent/style.css");*/
+
+/* ---------------------------------------------
+   DESIGN SITEJET - STYLES PERSONNALISÉS
+   --------------------------------------------- */
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #8b5a2b;
+    --accent-color: #c49a6c;
+    --light-bg: #f9f7f5;
+    --white: #ffffff;
+    --text-dark: #1e2a36;
+    --text-light: #5a6a7a;
+    --font-title: "Lora", serif;
+    --font-text: "Inter", sans-serif;
+    --border-radius: 16px;
+    --box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+    --spacing: 4rem;
+}
+
+/* Typographie */
+body {
+    font-family: var(--font-text);
+    color: var(--text-dark);
+    line-height: 1.7;
+    background-color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-title);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+}
+
+/* Hero Section - Plein écran */
+.hero-section {
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    margin-bottom: var(--spacing);
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content p {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+/* Bouton principal */
+.btn {
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Grille de cartes - Design SiteJet */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    height: 240px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.card-content {
+    padding: 28px;
+    flex-grow: 1;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: var(--primary-color);
+}
+
+/* Sections alternées */
+.section-light {
+    background-color: var(--light-bg);
+    padding: var(--spacing) 0;
+    margin: var(--spacing) 0;
+}
+
+.section-white {
+    background-color: var(--white);
+    padding: var(--spacing) 0;
+}
+
+/* Pied de page - Préservé à l'identique */
+.site-footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    :root {
+        --spacing: 2.5rem;
+    }
+
+    .hero-section {
+        height: 70vh;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-menu li {
+    margin: 0;
+}
+
+.footer-menu a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: opacity 0.3s ease;
+    opacity: 0.8;
+}
+
+.footer-menu a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footer-menu a {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== FAQ STYLING - VERSION PROFESSIONNELLE ===== */
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #b75b7d;
+}
+
+.faq-section {
+    margin-bottom: 0;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 25px;
+    border-left: 4px solid #b75b7d;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.faq-section:last-child {
+    border-bottom: none;
+}
+
+.faq-section:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.faq-question strong {
+    color: #b75b7d;
+    font-weight: 700;
+}
+
+.faq-icon {
+    font-size: 1.4rem;
+}
+
+.faq-answer {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #2c3e50;
+    margin-left: 32px;
+    padding-bottom: 4px;
+}
+
+.faq-answer a {
+    color: #b75b7d;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.faq-answer a:hover {
+    text-decoration: underline;
+}
+
+.faq-answer strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .faq-container {
+        padding: 25px 15px;
+    }
+
+    .faq-title {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+
+    .faq-section {
+        padding: 16px 20px;
+    }
+
+    .faq-question {
+        font-size: 1.05rem;
+    }
+
+    .faq-answer {
+        margin-left: 28px;
+        font-size: 0.95rem;
+    }
+}
+
+/* ===== PAGE SERVICES - CORRECTION SCROLL UNIQUEMENT ===== */
+body.page-template-page-services,
+body.page-template-page-services .site-content,
+body.page-template-page-services main,
+body.page-template-page-services .container {
+    overflow: visible !important;
+    height: auto !important;
+}
+
+body.page-template-page-services .services-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 30px !important;
+    overflow: visible !important;
+    height: auto !important;
+}
+
+body.page-template-page-services .service-card-large {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+}
+
+@media (max-width: 992px) {
+    body.page-template-page-services .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+    }
+}
+
+/* ===== CORRECTIONS GÉNÉRALES ===== */
+html,
+body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+}
+
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+img,
+iframe,
+video,
+table,
+figure,
+.wp-block-image,
+.wp-block-cover {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Annuler les majuscules automatiques */
+body,
+body * {
+    text-transform: none !important;
+}
+
+/* Téléphone rouge */
+.contact-item:nth-child(2) .contact-icon {
+    color: #b22222 !important;
+    text-shadow: 1px 1px 0px #000000 !important;
+    filter: none !important;
+}
+
+/* ============================================
+   MENU PIED DE PAGE - VERSION ATTRANTE
+   ============================================ */
+
+.footer-menu-wrapper {
+    text-align: center;
+    margin: 20px 0 25px;
+    padding: 15px 0 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-menu li {
+    margin: 0;
+    position: relative;
+}
+
+/* Séparateur entre les liens */
+.footer-menu li:not(:last-child)::after {
+    content: '|';
+    position: absolute;
+    right: -20px;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.9rem;
+}
+
+.footer-menu a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+    padding: 5px 0;
+    display: inline-block;
+    position: relative;
+}
+
+/* Effet de soulignement au survol */
+.footer-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #b75b7d;
+    transition: width 0.3s ease;
+}
+
+.footer-menu a:hover {
+    color: #ffffff;
+}
+
+.footer-menu a:hover::after {
+    width: 100%;
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+    .footer-menu-wrapper {
+        margin: 15px 0 20px;
+        padding: 12px 0 8px;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footer-menu li:not(:last-child)::after {
+        display: none;
+    }
+
+    .footer-menu a {
+        font-size: 1rem;
+        padding: 6px 15px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 30px;
+        min-width: 180px;
+    }
+
+    .footer-menu a::after {
+        display: none;
+    }
+
+    .footer-menu a:hover {
+        background: #b75b7d;
+        transform: translateY(-2px);
+    }
+}
+
+/* =========================================================
+   PAGE "NOS CHAMBRES" — LAYOUT PRÉCIS, BLOCS STABLES
+   ========================================================= */
+
+/* Liste principale */
+body .chambres-page .chambres-liste {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== BLOC CHAMBRE ===== */
+body .chambres-page .chambre-item {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 50px;
+    align-items: stretch;
+    width: 100%;
+
+    /* ✅ Fin de bloc claire et réelle */
+    margin-bottom: 80px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+    /* ✅ Aucun débordement possible */
+    overflow: hidden;
+}
+
+/* Dernière chambre : pas de trait */
+body .chambres-page .chambre-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* ===== COLONNES ===== */
+body .chambres-page .chambre-image-col,
+body .chambres-page .chambre-content-col {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* ===== IMAGE ===== */
+body .chambres-page .chambre-image-col {
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+body .chambres-page .chambre-image-col img {
+    width: 100%;
+    height: 100%;
+    max-height: 460px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+}
+
+/* ===== ALTERNANCE GAUCHE / DROITE ===== */
+body .chambres-page .chambre-item.reverse {
+    direction: rtl;
+}
+
+body .chambres-page .chambre-item.reverse>* {
+    direction: ltr;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+    body .chambres-page .chambre-item {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+    }
+
+    body .chambres-page .chambre-image-col img {
+        max-height: 300px;
+        height: auto;
+    }
+}
